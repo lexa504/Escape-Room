@@ -1,0 +1,49 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  margin: 0%;
+  overflow: hidden;
+}
+
+.game-image {
+  position: absolute;
+}
+#room {
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+}
+#key {
+  left: 20.7%;
+  top: 72%;
+  width: 5%;
+  height: 5%;
+}
+#bean-bag {
+  left: 20%;
+  top: 72%;
+  width: 12%;
+  height: 12%;
+}
+#trophy {
+  left: 80%;
+  top: 77%;
+  width: 5%;
+  height: 8%;
+}
+#poster {
+  left: 87%;
+  top: 35%;
+  width: 8%;
+  height: 15%;
+}
+#lock {
+  left: 76%;
+  top: 68%;
+  width: 2%;
+  width: 2%;
+}
