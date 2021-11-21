@@ -4,6 +4,9 @@ let key;
 window.onload = init;
 
 function init() {
+  window.addEventListener("message", (message) => {
+    console.log(message.data);
+  });
   setTimeout(() => {
     document.getElementById("hint-1").style.display = "none";
   }, 5000);
@@ -20,5 +23,11 @@ function moveBush() {
 
 function putKeyInventory() {
   key.style.display = "none";
-  postMessage("message", "http://localhost:8080/")
+  window.parent.postMessage(
+    {
+      action: "in",
+      item: "outside-key",
+    },
+    "*"
+  );
 }
