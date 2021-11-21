@@ -1,18 +1,27 @@
 let bush;
 let key;
+let hasOutsideKey = false;
 
 window.onload = init;
 
 function init() {
   window.addEventListener("message", (message) => {
-    console.log(message.data);
+    if (message.data === "got outside key") {
+      console.log("got it");
+      hasOutsideKey = true;
+    }
   });
-  setTimeout(() => {
-    document.getElementById("hint-1").style.display = "none";
-  }, 5000);
   bush = document.getElementById("bush");
   bush.addEventListener("click", moveBush);
   key = document.getElementById("key");
+  window.parent.postMessage(
+    {
+      action: "alert",
+      msg: "You need to go inside the house! Try and find a key.",
+      color: "black"
+    },
+    "*"
+  );
 }
 
 function moveBush() {

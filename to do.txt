@@ -1,3 +1,4 @@
 - bush slide
 - phone flip to horizontal
-- 
+- source ~/.bash_profile
+- werid bug when console log is removed message doesn't show up
